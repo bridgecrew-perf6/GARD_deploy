@@ -42,7 +42,7 @@ s3Stream.pipe(fileStream).on('error', function (err) {
 }).on('close', function () {
 
     console.log(`Unzip ${FileName}`);
-    exec("tar -xf deploy.tar.gz", (error, stdout, stderr) => {
+    exec(`tar -xf ${FileName}`, (error, stdout, stderr) => {
         if (error) {
             console.log(`Unzip ${FileName} - error: ${error.message}`);
             return;
