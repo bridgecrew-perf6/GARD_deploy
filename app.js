@@ -19,7 +19,7 @@ AWS.config.update(
 
 const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
-const FileName = process.env.filename | 'deploy.tar.gz';
+const FileName = process.env.filename;
 
 const params = {
     Bucket: S3Bucket,
